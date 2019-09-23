@@ -1,0 +1,40 @@
+Day 1: I looked up some practice python prompts. My goal was to try to remember syntax and try to find the most 'pythonic' way to solve these simple problems. It came back better than I'd hoped. But these are the problems I was working on.
+
+You work for a manufacturer, and have been asked to calculate the total profit made on the sales of a product. You are given a dictionary containing the cost price per unit (in dollars), sell price per unit (in dollars), and the starting inventory. Return the total profit made, rounded to the nearest dollar. Assume all of the inventory has been sold.
+
+i = {
+  "cost_price": 32.67,
+  "sell_price": 45.00,
+  "inventory": 1200
+}
+i2 = {
+  "cost_price": 225.89,
+  "sell_price": 550.00,
+  "inventory": 100
+}
+profit(i2)
+32411.0
+def profit(d):
+    total_cost = d["cost_price"] * d["inventory"]
+    total_sale = d["sell_price"] * d["inventory"]
+    total_profit = total_sale-total_cost
+    print(total_profit)
+print((i["sell_price"]*i["inventory"]) - (i['cost_price']*i['inventory'])) 
+14796.0
+profit(i)
+14796.0
+To train for an upcoming marathon, Johnny goes on one long-distance run each Saturday. He wants to track how often the number of miles he runs exceeds the previous Saturday. This is called a progress day.
+
+Create a function that takes in a list of miles run every Saturday and returns Johnny's total number of progress days.
+
+miles_ran = [5,7,11,8,9,2,10,2,4,6,2,1]
+def prog_day(lst):
+    x=0
+    progress_days = 0
+    for num in range(len(lst)-1):
+        if lst[x] < lst[(x+1)]:
+            progress_days += 1
+        x +=1    
+    print(progress_days)  
+prog_day(miles_ran)
+6
