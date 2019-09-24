@@ -1,0 +1,1 @@
+Implemented structure for state machine to evaluate 5 card hand. Did not start the state functions yet.
