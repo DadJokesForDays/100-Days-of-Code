@@ -1,0 +1,1 @@
+I spend the majority of the day writing a script in perl for work. It uses regex to catch specific perameters that are then turned into arguments. Then I have a program run against the perameters to see if they are in alarm. I'll post the code once I get it. It was written on a customer's server in AIX (vi)
