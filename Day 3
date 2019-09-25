@@ -1,0 +1,49 @@
+This is a reverse coding challenge. Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
+
+Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+
+mystery_func(152) ➞ 10
+
+mystery_func(832) ➞ 48
+
+mystery_func(19) ➞ 9
+
+mystery_func(133) ➞ 9
+
+ 
+def my_func(num):
+    n = 0
+    lst = []
+    for item in str(num): # converts the item into a string so it can be iterated
+        lst.append(int(item)) # converts it back into an integer so they can be math'd
+    total = lst[0]  #starting the total with the first digit
+    while n < len(lst): 
+        total = total*(n+1) 
+        n += 1
+    print(total)
+    
+        
+84928734
+my_func(84928734)
+322560
+
+Did some file manipulation
+
+Given a .txt file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen.
+
+The script was done in babun, which is also where the text file is located
+
+#!/usr/bin/python
+
+filename = '/home/Bubba/docs/test.txt'
+names = {}
+
+with open(filename,'r') as c: # open the file as readable
+    for line in c.readlines():
+        line = line.rstrip()  #this removes the \n at the end of the line
+        if line not in names: # if the name is new, it creates a new dict entry
+            names[line]=1
+        else:
+            names[line] += 1  #adds another count of the name if it's already there
+
+print(names)
